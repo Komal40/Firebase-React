@@ -1,0 +1,87 @@
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  /* Add borders to table and cells */
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+
+  /* Table header styling */
+  thead th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+  }
+
+  /* Table body styling */
+  tbody td {
+    padding: 10px;
+  }
+
+  /* Add zebra-striping for rows */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* Hover effect on rows */
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Buttons styling */
+  button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button[type="button"] {
+    background-color: #007bff;
+    color: white;
+  }
+
+  button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* Responsive table for small screens */
+  @media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    /* Hide the table headers */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    /* Display rows as cards */
+    tr {
+      margin-bottom: 20px;
+    }
+
+    /* Display data with labels for small screens */
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
